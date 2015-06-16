@@ -11,3 +11,6 @@
 # Basic git config name and email setup
 #git config --global user.name "Your name"
 #git config --global user.email yourname@example.com
+
+#makes the ~/.gitignore the root gitignore
+#git config --global core.excludesfile '~/.gitignore'
