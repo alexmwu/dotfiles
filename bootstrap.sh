@@ -4,9 +4,12 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
 
+# .osx for osx not terminal configurations
+# inits.sh for some initial setup
+# init has preference files
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude ".osx" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -avh --no-perms . ~;
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude ".osx" --exclude "inits.sh" --exclude "init/" \
+		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "brew.sh" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
