@@ -80,7 +80,7 @@
 [core]
 
 #	# Use custom `.gitignore` and `.gitattributes`
-#	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 #	attributesfile = ~/.gitattributes
 #
 #	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -141,4 +141,9 @@
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
 	# installations. To use `simple` instead, add this to your `~/.extra` file:
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
-	#default = matching
+
+
+  # matching means git push will push all local branches to the ones with same name on remote.
+  # simple means git push will push only current branch to one that git pull would pull from 
+  # it also checks that their names match.
+	default = simple

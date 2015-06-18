@@ -16,6 +16,7 @@
 #.gitconfig. ignore this
 #git config --global core.excludesfile '~/.gitignore'
 
+#already in config. ignore
 #matching means git push will push all local branches to the ones with same name on remote.
 #simple means git push will push only current branch to one that git pull would pull from 
 #it also checks that their names match.
