@@ -12,5 +12,11 @@
 #git config --global user.name "Your name"
 #git config --global user.email yourname@example.com
 
-#makes the ~/.gitignore the root gitignore
+#makes the ~/.gitignore the root gitignore; already in 
+#.gitconfig. ignore this
 #git config --global core.excludesfile '~/.gitignore'
+
+#matching means git push will push all local branches to the ones with same name on remote.
+#simple means git push will push only current branch to one that git pull would pull from 
+#it also checks that their names match.
+#git config --global push.default simple
