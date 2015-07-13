@@ -93,3 +93,5 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # Set vi to vim
 alias vi="vim"
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+#alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
