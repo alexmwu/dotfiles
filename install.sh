@@ -9,11 +9,12 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Install pip/pip-related setup
-#sudo easy_install pip
-#sudo pip install -U setuptools
+sudo easy_install pip
+sudo pip install -U setuptools
 
 # Install thefuck
-#sudo pip install thefuck
+sudo pip install pathlib
+sudo pip install thefuck
 
 # Make sure we’re using the latest Homebrew.
 brew update
