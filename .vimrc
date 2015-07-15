@@ -1,7 +1,8 @@
 " Plugins
 call plug#begin()
 Plug 'tpope/vim-sensible'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
+"Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -19,8 +20,6 @@ Plug 'matze/vim-move'
 Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
 
-source ~/.vimrc.janus
-
 " sticky shift aliases
 command W w
 command WQ wq
@@ -32,7 +31,7 @@ set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
 
-" Make Vim more useful
+" Use vim, no vi defaults
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 " set clipboard=unnamed
@@ -118,6 +117,10 @@ set cursorline
 set tabstop=2
 " Makes tabs convert to spaces
 set expandtab
+" an autoindent (with <<) is two spaces
+set shiftwidth=2
+" don't wrap lines
+" set nowrap
 
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
@@ -127,9 +130,11 @@ set expandtab
 " Highlight searches
 set hlsearch
 " Ignore case of searches
-" set ignorecase
+set ignorecase
 " Highlight dynamically as pattern is typed
 set incsearch
+" ... unless they contain at least one capital letter
+set smartcase
 " Always show status line
 set laststatus=2
 " Enable mouse in all modes

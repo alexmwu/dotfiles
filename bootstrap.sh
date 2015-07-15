@@ -28,11 +28,15 @@ unset doIt;
 vim +PlugInstall +qa
 
 # Basic git config name and email setup
-echo "Please enter git name: "
-read git_name
-git config --global user.name $git_name
-echo "Please enter git email: "
-read git_email
-git config --global user.email $git_email
+if [ -t 1 ]; then
+  echo "Please enter git name: "
+  read git_name
+  echo $git_name
+#  git config --global user.name $git_name
+  echo "Please enter git email: "
+  read git_email
+  echo $git_email
+#  git config --global user.email $git_email
+fi
 
 git config --list
