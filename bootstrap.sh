@@ -8,8 +8,8 @@ git pull origin master;
 # inits.sh for some initial setup
 # init has preference files
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude ".osx" --exclude "inits.sh" --exclude "init/" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "brew.sh" -avh --no-perms . ~;
+	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude ".osx" --exclude "init/" \
+		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "install.sh" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
