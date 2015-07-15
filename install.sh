@@ -105,4 +105,7 @@ brew install tmux
 # brew install zopfli
 
 # Remove outdated versions from the cellar.
-# brew cleanup
+brew cleanup
+
+
+vim +PlugInstall +qa

@@ -23,3 +23,16 @@ else
 	fi;
 fi;
 unset doIt;
+
+
+
+# Basic git config name and email setup
+echo "Please enter git name: "
+read git_name
+git config --global user.name git_name
+echo "Please enter git email: "
+read git_email
+git config --global user.email git_email
+
+# Make home gitignore global gitignore
+git config --global core.excludesfile '~/.gitignore'
