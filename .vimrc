@@ -1,3 +1,32 @@
+" Plugins
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/syntastic'
+Plug 'kchmck/vim-coffee-script'
+Plug 'altercation/vim-colors-solarized'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'vim-ruby/vim-ruby'
+Plug 'matze/vim-move'
+Plug 'bronson/vim-trailing-whitespace'
+call plug#end()
+
+source ~/.vimrc.janus
+
+" sticky shift aliases
+command W w
+command WQ wq
+" command Wq wq
+" command Q q
+
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
@@ -19,11 +48,47 @@ set ttyfast
 " set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
+" Change mapleader to backslash, map (recursively) space to leader
+let mapleader="\\"
+map <Space> <leader>
+
+" No swapfiles
+set noswapfile
+
+" maintain indentaion when adding a new line
+set smartindent
+set autoindent
+filetype indent on
+
+" Tell CtrlP to ignore certain files and directories
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  'node_modules$\|\.git$\|\_site$',
+    \ 'file': '\.DS_Store$\|\.jpg$\|\.png$\|\.jpeg$\|\jpeg.gif$\|\.svg$'
+    \ }
+
+" ESC should clear highlighted search terms
+nnoremap <CR> :noh<CR><CR>
+
+" NERDTree
+map <leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" vim-move
+let g:move_key_modifier = 'C'
+
+" NERDCommenter
+filetype plugin on
+
+" vim-move prevent indentation of blocks from getting lost
+let g:move_auto_indent = 0
+
+" faster ctrlp
+" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git -g ""'"
+
 " Don’t add empty newlines at the end of files
 set binary
 set noeol
+
 " Centralize backups, swapfiles and undo history
 " set backupdir=~/.vim/backups
 " set directory=~/.vim/swaps
@@ -97,16 +162,17 @@ set showcmd
 set scrolloff=3
 
 " Strip trailing whitespace (,ss)
-" function! StripWhitespace()
-" 	let save_cursor = getpos(".")
-" 	let old_query = getreg('/')
-" 	:%s/\s\+$//e
-" 	call setpos('.', save_cursor)
-" 	call setreg('/', old_query)
-" endfunction
-" noremap <leader>ss :call StripWhitespace()<CR>
-" " Save a file as root (,W)
-" noremap <leader>W :w !sudo tee % > /dev/null<CR>
+function! StripWhitespace()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
+endfunction
+
+noremap <leader>ss :call StripWhitespace()<CR>
+" Save a file as root (<leader>W)
+"noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 " if has("autocmd")
