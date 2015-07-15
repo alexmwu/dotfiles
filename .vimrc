@@ -188,3 +188,10 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " 	" Treat .md files as Markdown
 " 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 " endif
+
+" Map NERDTree toggling to ctrl-n
+map <C-n> :NERDTreeToggle<CR>
+
+" Start vim on NERDTree if no arguments specified for vim
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
