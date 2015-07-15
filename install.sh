@@ -106,6 +106,3 @@ brew install tmux
 
 # Remove outdated versions from the cellar.
 brew cleanup
-
-
-vim +PlugInstall +qa
