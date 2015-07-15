@@ -41,8 +41,11 @@ brew install coreutils
 # brew tap homebrew/versions
 # brew install bash-completion2
 
-# Instal tmux
+# Install tmux
 brew install tmux
+
+# Install the_silver_searcher
+brew install the_silver_searcher
 
 # Install `wget` with IRI support.
 # brew install wget --with-iri

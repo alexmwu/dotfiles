@@ -49,6 +49,4 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # VIM
 export EDITOR='vim'
-bindkey -v
-export KEYTIMEOUT=1
 
