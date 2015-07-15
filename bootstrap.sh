@@ -9,7 +9,7 @@ git pull origin master;
 # init has preference files
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude ".osx" --exclude "init/" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "install.sh" -avh --no-perms . ~;
+		--exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "ruby_install.sh" --exclude "install.sh" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
