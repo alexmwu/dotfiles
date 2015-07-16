@@ -2,7 +2,7 @@
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'mileszs/ack.vim'
-"Plug 'rking/ag.vim'
+Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -166,7 +166,7 @@ set showcmd
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
-" Strip trailing whitespace (,ss)
+" Strip trailing whitespace (<space>ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")
 	let old_query = getreg('/')
@@ -196,7 +196,11 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Use the_silver_searcher if available
 if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
-  endif
+  let g:ackprg = 'ag --vimgrep'
 endif
+
+" Remap ctrl-c to delete buffer in current window without closing window (goes
+" to previous buffer instead)
+nnoremap <C-c> :bp\|bd #<CR>
