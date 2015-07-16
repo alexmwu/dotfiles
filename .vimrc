@@ -8,16 +8,16 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
-Plug 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-repeat'
-Plug 'vim-ruby/vim-ruby'
-Plug 'matze/vim-move'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'matze/vim-move'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " sticky shift aliases
@@ -72,7 +72,7 @@ nnoremap <CR> :noh<CR><CR>
 map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" vim-move
+" vim-move modifier key from alt to ctrl
 let g:move_key_modifier = 'C'
 
 " NERDCommenter
