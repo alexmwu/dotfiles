@@ -44,6 +44,9 @@ brew install coreutils
 # Install tmux
 brew install tmux
 
+# Install tmuxinator
+sudo gem install tmuxinator
+
 # Install the_silver_searcher
 brew install the_silver_searcher
 
@@ -51,7 +54,7 @@ brew install the_silver_searcher
 # brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-# brew install vim --override-system-vi
+brew install vim --override-system-vi
 # brew install homebrew/dupes/grep
 # brew install homebrew/dupes/openssh
 # brew install homebrew/dupes/screen
@@ -89,7 +92,7 @@ brew install the_silver_searcher
 # brew install xz
 
 # Install other useful binaries.
-# brew install ack
+brew install ack
 # #brew install exiv2
 # brew install git
 # brew install git-lfs
