@@ -15,9 +15,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'matze/vim-move'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
+" Adds plugin support for '.' command in vim
+" Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-rails'
+" Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 " sticky shift aliases
@@ -50,6 +51,7 @@ set encoding=utf-8 nobomb
 " Change mapleader to backslash, map (recursively) space to leader
 let mapleader="\\"
 map <Space> <leader>
+map <Space><Space> <leader><leader>
 
 " No swapfiles
 set noswapfile
