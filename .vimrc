@@ -206,3 +206,19 @@ endif
 " Remap ctrl-c to delete buffer in current window without closing window (goes
 " to previous buffer instead)
 nnoremap <C-c> :bp\|bd #<CR>
+
+" fugitive git bindings
+nnoremap <space>ga :Git add %:p<CR><CR>
+nnoremap <space>gs :Gstatus<CR>
+nnoremap <space>gc :Gcommit -v -q<CR>
+nnoremap <space>gt :Gcommit -v -q %:p<CR>
+nnoremap <space>gd :Gdiff<CR>
+"nnoremap <space>ge :Gedit<CR>
+"nnoremap <space>gr :Gread<CR>
+"nnoremap <space>gw :Gwrite<CR><CR>
+nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <space>gm :Gmove<Space>
+nnoremap <space>gb :Git branch<Space>
+nnoremap <space>go :Git checkout<Space>
+nnoremap <space>gps :Git push<CR>
+nnoremap <space>gpl :Git pull<CR>
