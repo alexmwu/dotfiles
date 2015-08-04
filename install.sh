@@ -50,6 +50,9 @@ sudo gem install tmuxinator
 # Install the_silver_searcher
 brew install the_silver_searcher
 
+# Install rbenv and rbenv-build
+brew install rbenv
+
 # Install `wget` with IRI support.
 # brew install wget --with-iri
 
