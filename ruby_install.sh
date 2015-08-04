@@ -1,9 +1,9 @@
 #!/bin/bash
 
-############
+###############################
 # Linux ONLY
-# This is done by brew
-############
+# This is done by brew for OSX
+###############################
 
 # install rbenv and ruby-build
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv

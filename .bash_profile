@@ -1,6 +1,7 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-export PATH="$HOME/.rbenv/bin:$PATH";
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -8,16 +9,16 @@ export PATH="$HOME/.rbenv/bin:$PATH";
 for file in ~/.{path,bash_prompt,exports,bash_aliases,functions,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
-unset file;
+unset file
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob;
+shopt -s nocaseglob
 
 # Append to the Bash history file, rather than overwriting it
-shopt -s histappend;
+shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`
-shopt -s cdspell;
+shopt -s cdspell
 
 # Enable some Bash 4 features when possible:
 # * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
