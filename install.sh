@@ -41,11 +41,14 @@ brew install coreutils
 # brew tap homebrew/versions
 # brew install bash-completion2
 
+# Install bundler
+gem install bundler
+
 # Install tmux
 brew install tmux
 
 # Install tmuxinator
-sudo gem install tmuxinator
+gem install tmuxinator
 
 # Install the_silver_searcher
 brew install the_silver_searcher
