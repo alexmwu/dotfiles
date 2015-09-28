@@ -27,6 +27,9 @@ brew upgrade
 brew install coreutils
 # sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
+# pkg-config finds installed libraries on system
+brew install pkg-config
+
 # Install some other useful utilities like `sponge`.
 # brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
