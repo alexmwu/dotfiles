@@ -14,7 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-endwise'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'matze/vim-move'
-Plug 'mrtazz/DoxygenToolkit.vim'
+Plug 'alexmwu/DoxygenToolkit.vim'
 " Adds support for '.' command for vim plugins
 " Plug 'tpope/vim-repeat'
 " Plug 'tpope/vim-rails'
