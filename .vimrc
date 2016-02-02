@@ -115,11 +115,11 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
+" Make tabs as wide as four spaces
 set tabstop=4
 " Makes tabs convert to spaces
 set expandtab
-" an autoindent (with <<) is two spaces
+" an autoindent (with <<) is four spaces
 set shiftwidth=4
 " don't wrap lines
 " set nowrap
