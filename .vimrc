@@ -225,3 +225,6 @@ nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
 nnoremap <space>gps :Git push<CR>
 nnoremap <space>gpl :Git pull<CR>
+
+let g:DoxygenToolkit_compactDoc = "yes"
+
