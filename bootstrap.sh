@@ -26,6 +26,7 @@ fi;
 unset doIt;
 
 # Install plugins
+# :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 vim +PluginInstall +qa
 
 # Basic git config name and email setup
