@@ -26,7 +26,7 @@ fi;
 unset doIt;
 
 # Install plugins
-vim +PlugInstall +qa
+vim +PluginInstall +qa
 
 # Basic git config name and email setup
 if [ -t 1 ]; then

@@ -1,25 +1,36 @@
+" Use vim, no vi defaults
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+
 " Plugins
-call plug#begin()
-Plug 'tpope/vim-sensible'
-Plug 'mileszs/ack.vim'
-Plug 'rking/ag.vim'
-Plug 'kien/ctrlp.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-" Plug 'kchmck/vim-coffee-script'
-Plug 'altercation/vim-colors-solarized'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-endwise'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'matze/vim-move'
-Plug 'alexmwu/DoxygenToolkit.vim'
+Plugin 'tpope/vim-sensible'
+Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+" Plugin 'kchmck/vim-coffee-script'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-endwise'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'matze/vim-move'
+Plugin 'alexmwu/DoxygenToolkit.vim'
 " Adds support for '.' command for vim plugins
-" Plug 'tpope/vim-repeat'
-" Plug 'tpope/vim-rails'
-" Plug 'vim-ruby/vim-ruby'
-call plug#end()
+" Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-rails'
+" Plugin 'vim-ruby/vim-ruby'
+call vundle#end()
 
 " sticky shift aliases
 command W w
@@ -32,8 +43,6 @@ set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
 
-" Use vim, no vi defaults
-set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 " set clipboard=unnamed
 " Enhance command-line completion
