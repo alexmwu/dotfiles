@@ -30,12 +30,15 @@ brew install coreutils
 # pkg-config finds installed libraries on system
 brew install pkg-config
 
+# Install Node.js and npm
+brew install node
+
 # Install some other useful utilities like `sponge`.
 # brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 # brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-# brew install gnu-sed --with-default-names
+brew install gnu-sed --with-default-names
 
 # Install Bash 4.
 # ***Note***: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
@@ -65,6 +68,9 @@ brew install rbenv
 # Install more recent versions of some OS X tools.
 # brew install vim --override-system-vi
 brew install macvim --with-override-system-vim
+
+# Install diff so fancy (better git diffs)
+npm install -g diff-so-fancy
 
 # brew install homebrew/dupes/grep
 # brew install homebrew/dupes/openssh
