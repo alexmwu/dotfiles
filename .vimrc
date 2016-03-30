@@ -110,11 +110,14 @@ set binary
 set noeol
 
 " Centralize backups, swapfiles and undo history
-" set backupdir=~/.vim/backups
-" set directory=~/.vim/swaps
-" if exists("&undodir")
-"	set undodir=~/.vim/undo
-" endif
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if has("persistent_undo")
+    set undodir=~/.vim/undo
+    set undofile
+endif
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
 
 " Don’t create backups when editing files in certain directories
 " set backupskip=/tmp/*,/private/tmp/*
@@ -244,6 +247,9 @@ nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
 nnoremap <space>gps :Git push<CR>
 nnoremap <space>gpl :Git pull<CR>
+
+" Map Undotree to <space> ,
+nnoremap <space>, :UndotreeToggle<cr>
 
 let g:DoxygenToolkit_compactDoc = "yes"
 
