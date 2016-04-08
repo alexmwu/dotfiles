@@ -76,7 +76,9 @@ map <Space><Space> <leader><leader>
 set noswapfile
 
 " maintain indentaion when adding a new line
-set smartindent
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 set autoindent
 filetype indent on
 
