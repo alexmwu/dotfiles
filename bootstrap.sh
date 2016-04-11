@@ -10,7 +10,7 @@ git pull origin master;
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude ".osx" --exclude "init/" \
     --exclude "README.md" --exclude "LICENSE-MIT.txt" --exclude "Vagrantfile" --exclude "ruby_install.sh" \
-    --exclude "install.sh" --exclude "linuxinstall/" -avh --no-perms . ~;
+    --exclude ".Xmodmap" --exclude "install.sh" --exclude "linuxinstall/" -avh --no-perms . ~;
 	source ~/.bash_profile;
 }
 
