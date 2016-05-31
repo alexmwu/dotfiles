@@ -37,6 +37,9 @@ if [ -t 1 ]; then
     echo "Please enter git email: "
     read git_email
     git config --global user.email "$git_email"
+    # set up a template directory
+    git config --global init.templatedir '~/.git_template'
+    mkdir -p ~/.git_template/hooks
 fi
 
 # List git config
