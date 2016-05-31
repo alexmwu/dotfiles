@@ -84,9 +84,9 @@ filetype indent on
 
 " Tell CtrlP to ignore certain files and directories
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  'node_modules$\|\.git$\|\_site$',
-    \ 'file': '\.DS_Store$\|\.jpg$\|\.png$\|\.jpeg$\|\jpeg.gif$\|\.svg$'
-    \ }
+            \ 'dir':  'node_modules$\|\.git$\|\_site$',
+            \ 'file': '\.DS_Store$\|\.jpg$\|\.png$\|\.jpeg$\|\jpeg.gif$\|\.svg$'
+            \ }
 
 " ESC should clear highlighted search terms
 nnoremap <CR> :noh<CR><CR>
@@ -197,11 +197,11 @@ set autoread
 
 " Strip trailing whitespace (<space>ss)
 function! StripWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-  call setpos('.', save_cursor)
-  call setreg('/', old_query)
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
 endfunction
 
 noremap <leader>ss :call StripWhitespace()<CR>
@@ -227,7 +227,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Use the_silver_searcher if available
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag --vimgrep'
 endif
 
 " Remap ctrl-c to delete buffer in current window without closing window (goes

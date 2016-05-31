@@ -1,7 +1,7 @@
 [alias]
 
 #	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
 #
 #	# View the current working tree status using the short format
     s = status -s
@@ -9,11 +9,11 @@
     # diff so-fancy
     dsf = "!git diff --color $@ | diff-so-fancy"
 
-	# Show the diff between the latest commit and the current state
-	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+    # Show the diff between the latest commit and the current state
+    d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
-	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
-	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+    # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
 #	# Pull in remote changes for the current repository and all its submodules
 #	p = !"git pull; git submodule foreach git pull origin master"
@@ -65,25 +65,25 @@
 #
 #	# Merge GitHub pull request on top of the `master` branch
 #	mpr = "!f() { \
-#		if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
-#			git fetch origin refs/pull/$1/head:pr/$1 && \
-#			git rebase master pr/$1 && \
-#			git checkout master && \
-#			git merge pr/$1 && \
-#			git branch -D pr/$1 && \
-#			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
-#		fi \
-#	}; f"
+        #		if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
+        #			git fetch origin refs/pull/$1/head:pr/$1 && \
+        #			git rebase master pr/$1 && \
+        #			git checkout master && \
+        #			git merge pr/$1 && \
+        #			git branch -D pr/$1 && \
+        #			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
+        #		fi \
+        #	}; f"
 
 [apply]
 
-	# Detect whitespace errors when applying a patch
-	#whitespace = fix
+    # Detect whitespace errors when applying a patch
+    #whitespace = fix
 
 [core]
 
 #	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 #	attributesfile = ~/.gitattributes
 #
 #	# Treat spaces before tabs and all kinds of trailing whitespace as an error
@@ -101,22 +101,22 @@
 
 [color]
 
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
+    # Use colors in Git commands that are capable of colored output when
+    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+    ui = auto
 
 [color "branch"]
 
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 
 [color "diff"]
 
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
+    meta = yellow bold
+    frag = magenta bold # line info
+    old = red # deletions
+    new = green # additions
     commit = green bold
     whitespace = red reverse
 
@@ -129,34 +129,34 @@
 
 [color "status"]
 
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [diff]
 
-	# Detect copies as well as renames
-	renames = copies
+    # Detect copies as well as renames
+    renames = copies
 
 [help]
 
-	# Automatically correct and execute mistyped commands
-	#autocorrect = 1
+    # Automatically correct and execute mistyped commands
+    #autocorrect = 1
 
 [merge]
 
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
     tool = vimdiff
 
 [push]
 
-	# Use the Git 1.x.x default to avoid errors on machines with old Git
-	# installations. To use `simple` instead, add this to your `~/.extra` file:
-	# `git config --global push.default simple`. See http://git.io/mMah-w.
+    # Use the Git 1.x.x default to avoid errors on machines with old Git
+    # installations. To use `simple` instead, add this to your `~/.extra` file:
+    # `git config --global push.default simple`. See http://git.io/mMah-w.
 
 
   # matching means git push will push all local branches to the ones with same name on remote.
-  # simple means git push will push only current branch to one that git pull would pull from 
+  # simple means git push will push only current branch to one that git pull would pull from
   # it also checks that their names match.
-	default = simple
+    default = simple
