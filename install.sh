@@ -33,6 +33,9 @@ brew install pkg-config
 # Install Node.js and npm
 brew install node
 
+# Install Exuberant ctags
+brew install ctags
+
 # Install some other useful utilities like `sponge`.
 # brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
