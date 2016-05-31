@@ -36,7 +36,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
-Plugin 'alexmwu/DoxygenToolkit.vim'
+Plugin 'Valloric/YouCompleteMe'
 " Adds support for '.' command for vim plugins
 " Plugin 'tpope/vim-repeat'
 " Plugin 'tpope/vim-rails'
@@ -256,6 +256,4 @@ nnoremap <space>, :UndotreeToggle<cr>
 
 " Map tagbar to ctrl-l
 nmap <c-l> :TagbarToggle<CR>
-
-let g:DoxygenToolkit_compactDoc = "yes"
 
