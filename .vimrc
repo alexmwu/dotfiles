@@ -257,3 +257,5 @@ nnoremap <space>, :UndotreeToggle<cr>
 " Map tagbar to ctrl-l
 nmap <c-l> :TagbarToggle<CR>
 
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_confs/.c.py'
+

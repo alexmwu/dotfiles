@@ -33,6 +33,9 @@ brew install pkg-config
 # Install Node.js and npm
 brew install node
 
+# Install cmake
+brew install cmake
+
 # Install Exuberant ctags
 brew install ctags
 
