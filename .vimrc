@@ -35,6 +35,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mbbill/undotree'
+Plugin 'majutsushi/tagbar'
 Plugin 'alexmwu/DoxygenToolkit.vim'
 " Adds support for '.' command for vim plugins
 " Plugin 'tpope/vim-repeat'
@@ -252,6 +253,9 @@ nnoremap <space>gpl :Git pull<CR>
 
 " Map Undotree to <space> ,
 nnoremap <space>, :UndotreeToggle<cr>
+
+" Map tagbar to ctrl-l
+nmap <c-l> :TagbarToggle<CR>
 
 let g:DoxygenToolkit_compactDoc = "yes"
 
