@@ -29,6 +29,9 @@ unset doIt;
 # :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 vim +PluginInstall +qa
 
+# Make the backup directory
+mkdir -p ~/.vim/backups
+
 # Basic git config name and email setup
 if [ -t 1 ]; then
     echo "Please enter git name: "
