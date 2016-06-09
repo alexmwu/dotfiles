@@ -17,3 +17,4 @@ rbenv global
 # install helpful gems
 gem install --no-ri --no-rdoc bundler tmuxinator #hookup
 rbenv rehash
+
