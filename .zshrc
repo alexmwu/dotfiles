@@ -16,6 +16,13 @@ if [[ `uname` == 'Darwin' ]]; then
     eval "$(rbenv init -)";
 fi
 
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # OS X `ls`
+    colorflag="-G"
+fi
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
