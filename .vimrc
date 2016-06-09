@@ -51,7 +51,7 @@ command WQ wq
 
 " Use the Solarized Dark theme
 let g:solarized_termcolors=256
-set t_co=256
+set t_Co=256
 set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
