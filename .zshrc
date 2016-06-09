@@ -39,5 +39,4 @@ alias gs="git status"
 
 alias vi="vim"
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 
