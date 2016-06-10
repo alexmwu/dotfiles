@@ -63,3 +63,6 @@ alias gs="git status"
 alias vi="vim"
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
+# VIM
+export EDITOR='vim'
+
