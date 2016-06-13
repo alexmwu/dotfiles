@@ -261,3 +261,6 @@ nmap <c-k> :TagbarToggle<CR>
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_confs/.c.py'
 
+" Remove 'Thanks for flying vim message'
+set titleold=
+
