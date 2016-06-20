@@ -8,16 +8,11 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Install Homebrew First
 
 # Install pip/pip-related setup
 sudo easy_install pip
 sudo pip install -U setuptools
-
-# Install thefuck
-sudo pip install pathlib
-sudo pip install thefuck
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -28,7 +23,6 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-# sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # pkg-config finds installed libraries on system
 brew install pkg-config
@@ -42,10 +36,8 @@ brew install cmake
 # Install Exuberant ctags
 brew install ctags
 
-# Install some other useful utilities like `sponge`.
-# brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-# brew install findutils
+brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 
