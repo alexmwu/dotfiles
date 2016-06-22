@@ -27,7 +27,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 " Plugin 'kchmck/vim-coffee-script'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-endwise'
@@ -50,7 +49,7 @@ command WQ wq
 " command Q q
 
 " Use the Solarized Dark theme
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
 colorscheme solarized
