@@ -13,6 +13,11 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# IDE/Editor files
+.idea
+*.iml
+.vscode
+
 # Compiled source #
 ###################
 *.com
