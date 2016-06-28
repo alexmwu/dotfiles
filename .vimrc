@@ -97,17 +97,11 @@ nnoremap <CR> :noh<CR><CR>
 map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" vim-move modifier key from alt to ctrl
-let g:move_key_modifier = 'C'
-
 " NERDCommenter
 filetype plugin on
 
-" vim-move prevent indentation of blocks from getting lost
-let g:move_auto_indent = 0
-
 " faster ctrlp
-" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git -g ""'"
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git -g ""'"
 
 " Don’t add empty newlines at the end of files
 set binary
