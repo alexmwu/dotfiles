@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# allow clobbering on redirect
+setopt clobber
+
 # check if OS is OSX. if so, add this check
 if [[ `uname` == 'Darwin' ]]; then
     export PATH="$HOME/.rbenv/bin:$PATH";
