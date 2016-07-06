@@ -64,5 +64,6 @@ alias vi="vim"
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # VIM
-export EDITOR='vim'
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
