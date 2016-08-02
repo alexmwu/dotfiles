@@ -75,6 +75,9 @@
         #		fi \
         #	}; f"
 
+    # Create a ctags file for all files indexed by git
+    ctags = "!git ls-files | ctags --tag-relative -L - --languages=-sql"
+
 [apply]
 
     # Detect whitespace errors when applying a patch
