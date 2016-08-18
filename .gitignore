@@ -27,3 +27,6 @@ Thumbs.db
 *.o
 *.so
 
+# Tags files
+tags
+
