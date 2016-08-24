@@ -153,6 +153,8 @@ apm install autoclose-html
 apm install open-recent
 apm install pigments
 apm install vim-mode
+apm install git-time-machine
+apm install atom-ternjs
 
 # Remove outdated versions from the cellar.
 brew cleanup
