@@ -17,6 +17,7 @@ sudo pip install -U setuptools
 
 # Install Brew Cask
 brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -137,7 +138,7 @@ brew install homebrew/php/php55 --with-gmp
 # brew install xz
 
 # IntelliJ
-brew cask install intellij-idea;
+brew cask install intellij-idea-ce;
 
 # Install Atom and packages
 brew cask install atom
