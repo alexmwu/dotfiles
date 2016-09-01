@@ -29,6 +29,10 @@ brew cask install iterm2;
 
 brew cask install google-chrome;
 
+brew cask install spectacle;
+
+brew cask install lumen;
+
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -154,6 +158,7 @@ apm install autoclose-html
 apm install open-recent
 apm install pigments
 apm install vim-mode
+apm install git-blame
 apm install git-time-machine
 apm install atom-ternjs
 
