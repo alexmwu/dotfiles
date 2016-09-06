@@ -20,6 +20,14 @@ shopt -s nocaseglob;
 
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend;
+# Avoid duplicates
+export HISTCONTROL=ignoredups:erasedups
+# Large history
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;

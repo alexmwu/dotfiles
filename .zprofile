@@ -15,8 +15,19 @@ for file in ~/.{path,exports,bash_aliases,functions,extra}; do
 done;
 unset file;
 
+# History size
+SAVEHIST=10000
+HISTSIZE=10000
 # Append to zsh history file, rather than overwriting it
 setopt APPEND_HISTORY
+# Add to history immediately
+setopt INC_APPEND_HISTORY
+# More history info, e.g., timestamps
+setopt EXTENDED_HISTORY
+# Remove duplicates from search
+setopt HIST_FIND_NO_DUPS
+# Share history between shells
+setopt SHARE_HISTORY
 
 # allow clobbering on redirect
 setopt clobber
