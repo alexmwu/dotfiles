@@ -160,7 +160,9 @@ apm install pigments
 apm install vim-mode
 apm install git-blame
 apm install git-time-machine
+apm install merge-conflicts
 apm install atom-ternjs
+apm install atom-ctags
 
 # Remove outdated versions from the cellar.
 brew cleanup
