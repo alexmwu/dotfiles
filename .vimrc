@@ -35,7 +35,14 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mbbill/undotree'
 Plugin 'majutsushi/tagbar'
+
+" Use Plugin 'ervandew/supertab' for servers (lightweight; no dependencies)
 Plugin 'Valloric/YouCompleteMe'
+
+" Better status bar for vim
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 " Adds support for '.' command for vim plugins
 " Plugin 'tpope/vim-repeat'
 " Plugin 'tpope/vim-rails'
