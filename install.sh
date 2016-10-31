@@ -164,6 +164,9 @@ apm install merge-conflicts
 apm install atom-ternjs
 apm install atom-ctags
 
+# Install prezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
 # Remove outdated versions from the cellar.
 brew cleanup
 
