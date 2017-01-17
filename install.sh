@@ -45,6 +45,7 @@ brew install cmake
 # Install Node.js and npm
 brew install node
 
+pip install decorator
 pip install ipython[notebook]
 
 # Install Exuberant ctags
@@ -80,7 +81,7 @@ brew install wget --with-iri
 brew install macvim --with-override-system-vim
 
 # irc client
-brew install weechat --with-perl --with-python
+#brew install weechat --with-perl --with-python
 
 brew install ack
 # #brew install exiv2
