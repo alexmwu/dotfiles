@@ -88,6 +88,7 @@ brew install ack
 brew install git
 brew install git-lfs
 brew install tig
+brew install htop
 # brew install imagemagick --with-webp
 # brew install lua
 brew install haskell-platform
