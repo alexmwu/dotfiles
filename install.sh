@@ -165,6 +165,7 @@ apm install git-time-machine
 apm install merge-conflicts
 apm install atom-ternjs
 apm install atom-ctags
+apm install sort-lines
 
 # Install prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
