@@ -18,6 +18,7 @@ unset file;
 # History size
 SAVEHIST=10000
 HISTSIZE=10000
+HISTFILE=~/.zsh_history
 # Append to zsh history file, rather than overwriting it
 setopt APPEND_HISTORY
 # Add to history immediately
