@@ -25,13 +25,20 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+# Useful macOS apps
 brew cask install iterm2;
-
-brew cask install google-chrome;
-
 brew cask install spectacle;
+brew cask install intellij-idea-ce;
+# tmux (terminal pane/window manager)
+brew install tmux
+gem install tmuxinator
 
-brew cask install lumen;
+# Install Bash 4.
+# ***Note***: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
+# running `chsh`.
+# brew install bash
+# brew tap homebrew/versions
+# brew install bash-completion2
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -41,44 +48,29 @@ brew install coreutils
 brew install pkg-config
 
 brew install cmake
-
-# Install Node.js and npm
-brew install node
-
-pip install decorator
-pip install ipython[notebook]
-
 # Install Exuberant ctags
 brew install ctags
-
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
-
-# Install Bash 4.
-# ***Note***: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
-# brew install bash
-# brew tap homebrew/versions
-# brew install bash-completion2
-
-gem install bundler
-
-brew install tmux
-gem install tmuxinator
-
-brew install the_silver_searcher
-
+# Install Node.js and npm
+brew install node
 # Install rbenv and rbenv-build
 brew install rbenv
-
+# faster ack
+brew install the_silver_searcher
 # Install `wget` with IRI support.
 brew install wget --with-iri
+
 
 # Install more recent versions of some OS X tools.
 # brew install vim --override-system-vi
 brew install macvim --with-override-system-vim
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/openssh
+brew install homebrew/dupes/screen
+brew install homebrew/php/php55 --with-gmp
 
 # irc client
 #brew install weechat --with-perl --with-python
@@ -103,14 +95,6 @@ brew install haskell-platform
 # brew install tree
 # brew install webkit2png
 # brew install zopfli
-
-# Install diff so fancy (better git diffs)
-npm install -g diff-so-fancy
-
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
 # brew tap bramstein/webfonttools
@@ -143,8 +127,13 @@ brew install homebrew/php/php55 --with-gmp
 # brew install xpdf
 # brew install xz
 
-# IntelliJ
-brew cask install intellij-idea-ce;
+# Install diff so fancy (better git diffs)
+npm install -g diff-so-fancy
+
+gem install bundler
+
+pip install decorator
+pip install ipython[notebook]
 
 # Install Atom and packages
 brew cask install atom
@@ -154,18 +143,20 @@ brew install zeromq
 apm install hydrogen
 
 apm install atom-beautify
+apm install atom-ctags
+apm install atom-ide-ui
+apm install atom-ternjs
+apm install atom-typescript
 apm install auto-detect-indentation
-apm install linter
 apm install autoclose-html
-apm install open-recent
-apm install pigments
-apm install vim-mode
 apm install git-blame
 apm install git-time-machine
+apm install linter
 apm install merge-conflicts
-apm install atom-ternjs
-apm install atom-ctags
+apm install open-recent
+apm install pigments
 apm install sort-lines
+apm install vim-mode-plus
 
 # Install prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
