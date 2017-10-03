@@ -33,6 +33,9 @@ setopt SHARE_HISTORY
 # allow clobbering on redirect
 setopt clobber
 
+# explicitly set emacs mode
+bindkey -e
+
 # fix sudo autocorrecting issue in zsh
 alias sudo='nocorrect sudo'
 
