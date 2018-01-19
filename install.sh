@@ -29,8 +29,9 @@ brew upgrade
 brew cask install iterm2;
 brew cask install spectacle;
 brew cask install intellij-idea-ce;
-# tmux (terminal pane/window manager)
+# tmux (terminal pane/window manager) + useful utilities
 brew install tmux
+brew install reattach-to-user-namespace
 gem install tmuxinator
 
 # Install Bash 4.
