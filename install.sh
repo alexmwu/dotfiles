@@ -63,6 +63,8 @@ brew install rbenv
 brew install the_silver_searcher
 # Install `wget` with IRI support.
 brew install wget --with-iri
+# Install python 3
+brew install python3
 
 
 # Install more recent versions of some OS X tools.
