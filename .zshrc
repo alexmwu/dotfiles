@@ -1,15 +1,4 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
-# Need to run git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-# May have to run
-# git submodule update --init --recursive
-
-# Source Prezto.
+# Source Prezto: https://github.com/sorin-ionescu/prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
@@ -19,6 +8,9 @@ if [[ `uname` == 'Darwin' ]]; then
     export PATH="$HOME/.rbenv/bin:$PATH";
     eval "$(rbenv init -)";
 fi
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -48,6 +40,8 @@ setopt clobber
 
 # explicitly set emacs mode
 bindkey -e
+# use Autojump
+[ -f /usr/local/etc/profile.d/autojump.sh  ] && . /usr/local/etc/profile.d/autojump.sh
 
 # fix sudo autocorrecting issue in zsh
 alias sudo='nocorrect sudo'

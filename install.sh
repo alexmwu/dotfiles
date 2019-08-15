@@ -29,10 +29,13 @@ brew upgrade
 brew cask install iterm2;
 brew cask install spectacle;
 brew cask install intellij-idea-ce;
+brew cask install postman;
 # tmux (terminal pane/window manager) + useful utilities
 brew install tmux
 brew install reattach-to-user-namespace
 gem install tmuxinator
+
+brew install zsh
 
 # Install Bash 4.
 # ***Note***: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
@@ -48,11 +51,13 @@ brew install coreutils
 # pkg-config finds installed libraries on system
 brew install pkg-config
 
+brew install autojump
 brew install cmake
 # Install Exuberant ctags
 brew install ctags
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+brew install fswatch
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 # Install Node.js and npm
@@ -84,6 +89,7 @@ brew install git
 brew install git-lfs
 brew install tig
 brew install htop
+brew install jq
 # brew install imagemagick --with-webp
 # brew install lua
 brew install haskell-platform
@@ -127,6 +133,7 @@ brew install haskell-platform
 # brew install tcpreplay
 # brew install tcptrace
 # brew install ucspi-tcp # `tcpserver` etc.
+brew install watch
 # brew install xpdf
 # brew install xz
 
