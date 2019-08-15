@@ -60,6 +60,6 @@ fi;
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults;
 
-# VIM
-export EDITOR='vim';
+# NeoVim
+export EDITOR='/usr/local/bin/nvim';
 

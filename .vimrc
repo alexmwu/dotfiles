@@ -2,58 +2,54 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" On-demand loading
 
-" Vundle
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-" see :h vundle for more details or wiki for FAQ
-
-
-" Plugins
-Plugin 'tpope/vim-sensible'
-Plugin 'mileszs/ack.vim'
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-" Plugin 'kchmck/vim-coffee-script'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-endwise'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'mbbill/undotree'
-Plugin 'majutsushi/tagbar'
+Plug 'tpope/vim-sensible'
+Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/syntastic'
+" Plug 'kchmck/vim-coffee-script'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-endwise'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'mbbill/undotree'
+Plug 'majutsushi/tagbar'
 
 " Use Plugin 'ervandew/supertab' for servers (lightweight; no dependencies)
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 " Better status bar for vim
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Adds support for '.' command for vim plugins
-" Plugin 'tpope/vim-repeat'
-" Plugin 'tpope/vim-rails'
-" Plugin 'vim-ruby/vim-ruby'
-call vundle#end()
+" Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-rails'
+" Plug 'vim-ruby/vim-ruby'
+
+" show indentation levels
+Plug 'nathanaelkane/vim-indent-guides'
+call plug#end()
 
 " sticky shift aliases
 command W w
 command WQ wq
 " command Wq wq
 " command Q q
+"
+"
 
 " Use the Solarized Dark theme
 "let g:solarized_termcolors=256
@@ -66,8 +62,8 @@ let g:solarized_termtrans=1
 " set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
-" Allow cursor keys in insert mode
-set esckeys
+" Allow cursor keys in insert mode; works in nvim no issue
+"set esckeys
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 " Optimize for fast terminal connections
@@ -76,6 +72,7 @@ set ttyfast
 " set gdefault
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
+set fileencoding=utf-8
 " Change mapleader to backslash, map (recursively) space to leader
 let mapleader="\\"
 map <Space> <leader>
@@ -89,6 +86,7 @@ set cindent
 set cinkeys-=0#
 set indentkeys-=0#
 set autoindent
+set copyindent            " copy previous indenting
 filetype indent on
 
 " Tell CtrlP to ignore certain files and directories
@@ -103,6 +101,7 @@ nnoremap <CR> :noh<CR><CR>
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let NERDTreeShowHidden=1           " show hidden files
 
 " NERDCommenter
 filetype plugin on
@@ -158,10 +157,10 @@ set shiftwidth=4
 
 " Highlight searches
 set hlsearch
-" Ignore case of searches
-set ignorecase
 " Highlight dynamically as pattern is typed
 set incsearch
+" Ignore case of searches
+set ignorecase
 " ... unless they contain at least one capital letter
 set smartcase
 " Always show status line
@@ -261,6 +260,28 @@ nmap <c-k> :TagbarToggle<CR>
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_confs/.c.py'
 
+" Indent Guides Settings
+let g:indent_guides_enable_on_vim_startup = 1
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
 " Remove 'Thanks for flying vim message'
 set titleold=
+
+" Put in an autocmd group, so that we can delete them easily.
+augroup vimrcEx
+au!
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+" Also don't do it when the mark is in the first line, that is the default
+" position when opening a file.
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+augroup END
 

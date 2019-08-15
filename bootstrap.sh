@@ -26,9 +26,8 @@ else
 fi;
 unset doIt;
 
-# Install plugins
-# :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-vim +PluginInstall +qa
+# :PlugInstall    - installs plugins; append `!` to update or just :PlugUpdate
+vim +PlugInstall +qa
 
 # Make the backup directory
 mkdir -p ~/.vim/backups

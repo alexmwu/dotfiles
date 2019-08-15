@@ -69,7 +69,7 @@ brew install python3
 
 # Install more recent versions of some OS X tools.
 # brew install vim --override-system-vi
-brew install macvim --with-override-system-vim
+brew install neovim
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen

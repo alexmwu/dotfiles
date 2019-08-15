@@ -78,8 +78,9 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-# Set vi to vim
-alias vi="vim"
+# Set vi to nvim
+alias vi="nvim"
+alias vim="nvim"
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
