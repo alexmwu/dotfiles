@@ -143,7 +143,7 @@ npm install -g diff-so-fancy
 gem install bundler
 
 pip install decorator
-pip install ipython[notebook]
+brew install ipython
 
 # Install Atom and packages
 brew cask install atom
