@@ -15,8 +15,7 @@ Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic' TODO: figure out slow syntax handling for .env files
 " Plug 'kchmck/vim-coffee-script'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
@@ -38,6 +37,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'tpope/vim-repeat'
 " Plug 'tpope/vim-rails'
 " Plug 'vim-ruby/vim-ruby'
+Plug 'pangloss/vim-javascript'
 
 " show indentation levels
 Plug 'nathanaelkane/vim-indent-guides'
