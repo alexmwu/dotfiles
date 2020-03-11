@@ -3,14 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# check if OS is OSX. if so, add this check
-if [[ `uname` == 'Darwin' ]]; then
-    export PATH="$HOME/.rbenv/bin:$PATH";
-    eval "$(rbenv init -)";
-fi
-
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
