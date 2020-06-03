@@ -21,10 +21,16 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+alias l="ls -CF ${colorflag}"
+
+# List all files colorized, including dot files
+alias la="ls -aF ${colorflag}"
+
+# List non-hidden files colorized in long format
+alias ll="ls -lF ${colorflag}"
 
 # List all files colorized in long format, including dot files
-alias la="ls -laF ${colorflag}"
+alias lla="ls -laF ${colorflag}"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
