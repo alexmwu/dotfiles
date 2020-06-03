@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-
+# Consider running `diff -q . ~` before running this script to double check you
+# don't clobber your home directory
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
